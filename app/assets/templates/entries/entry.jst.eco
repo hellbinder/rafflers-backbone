@@ -1,0 +1,4 @@
+	<%= @entry.get('name') %>
+	<a data-id="<%= @entry.get('id') %>">
+		<img src="/assets/delete.png" title="Delete Entry">
+	</a>
