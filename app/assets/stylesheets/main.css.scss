@@ -84,6 +84,7 @@ li {
     float:right;
     display:none;
     cursor:pointer;
+    z-index:1;
   }
   .winner {
     position: absolute;

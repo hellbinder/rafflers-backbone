@@ -4,10 +4,14 @@ class Raffler.Routers.Entries extends Backbone.Router
 		'entries/:id': 'show'
 	initialize: ->
 		@collection = new Raffler.Collections.Entries()
-		@collection.fetch()
+		@collection.reset($('#container').data('entries'))
+	
 	index: -> 
 		view = new Raffler.Views.EntriesIndex(collection: @collection)
 		$('#container').html(view.render().el)
 
 	show: (id) ->
-		alert "Showing #{id}"
+		selectedEntry = @collection.get(id)
+		console.log(selectedEntry.attributes)
+		view = new Raffler.Views.EntriesShow(collection: selectedEntry.attributes) #collection used to send model you are going to work with.
+		$('#container').html(view.render().el)

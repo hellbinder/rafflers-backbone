@@ -1,0 +1,2 @@
+<h3>You have chosen <%= @entry.name %></h3>
+<a href="/" id="lnkToMain">Back to Raffler</a>

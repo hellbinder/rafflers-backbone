@@ -7,6 +7,4 @@
 <ul id="entries">
 </ul>
 <br/>
-<form id="draw_winner">
-	<input type="submit" value="Draw Winner"></input>
-</form>
+<button id="draw">Draw Winner</button> 

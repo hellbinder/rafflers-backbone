@@ -1,4 +1,7 @@
-	<%= @entry.get('name') %>
-	<a data-id="<%= @entry.get('id') %>">
-		<img src="/assets/delete.png" title="Delete Entry">
-	</a>
+<%= @entry.get('name') %>
+<a data-id="<%= @entry.get('id') %>">
+	<img src="/assets/delete.png" title="Delete Entry">
+</a>
+<% if @entry.get('winner'): %>
+		<span class="winner" style="margin-right:30px">WINNER!</span> 
+<% end %>
